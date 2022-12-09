@@ -4,11 +4,12 @@ import org.checkerframework.checker.nullness.qual.*;
 
 public abstract class Encryption {
 
-    // TODO: What kind of annotation is needed here?
+    // What kind of annotation is needed here?
+    @Nullable
     private String securityWarning;
 
-    // TODO: Annotate the parameter with the appropriate annotation.
-    public Encryption(String securityWarning) {
+    // Annotate the parameter with the appropriate annotation.
+    public Encryption(@Nullable String securityWarning) {
         this.securityWarning = securityWarning;
     }
     

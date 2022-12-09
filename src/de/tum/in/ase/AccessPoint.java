@@ -6,17 +6,21 @@ import static java.util.Objects.isNull;
 
 public class AccessPoint {
 
-    // TODO: What kind of annotation is needed for SSID?
+    // What kind of annotation is needed for SSID?
+    @NonNull
+
     private String SSID;
 
-    // TODO: What kind of annotation is needed for encryption?
+    // What kind of annotation is needed for encryption?
+    @Nullable
     private Encryption encryption;
 
-    // TODO: What kind of annotation is needed for password?
+    // What kind of annotation is needed for password?
+    @Nullable
     private String password;
 
-    // TODO: Annotate parameters with appropriate annotations.
-    public AccessPoint(String SSID, Encryption encryption, String password) {
+    //  Annotate parameters with appropriate annotations.
+    public AccessPoint(@NonNull String SSID, @Nullable Encryption encryption, @Nullable String password) {
         this.SSID = SSID;
         this.encryption = encryption;
         this.password = password;
@@ -67,8 +71,8 @@ public class AccessPoint {
         return true;
     }
 
-    // TODO: What kind of annotation is needed here?
-    public String toString() {
+    // What kind of annotation is needed here?
+    public @Nullable String toString() {
         return String.format("SSID: %s", SSID);
     }
 

@@ -1,5 +1,6 @@
 package de.tum.in.ase;
 
-// TODO: Annotate this class with the appropriate security level.
+// Annotate this class with the appropriate security level.
+@SecurityLevel(category = SecurityCategory.RECOMMENDED)
 public class WPA3 extends Encryption {
 }
